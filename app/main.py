@@ -22,24 +22,24 @@ def encrypt(text: str, key: str, iterations: int = 1, *, cipher: VigenaireСiphe
 @app.get('/api/v1/decrypt/{text}/{key}/{iterations}')
 def decrypt(text: str, key: str, iterations: int = 1, *, cipher: VigenaireСipher = Depends(get_cipher)):
     """
-    Метод для дешифрония текста при помощи шифра Виженера
+    Метод для расшифрования текста при помощи шифра Виженера
 
     Параметры:
-    - text: текст для дешифрования
-    - key: ключ дешифрования
-    - iterations: количество итераций дешифрования
+    - text: текст для расшифрования
+    - key: ключ расшифрования
+    - iterations: количество итераций расшифрования
     """
     return cipher.decrypting(text, key, iterations)
 
 @app.get('/api/v1/encrypt_decrypt/{text}/{key}/{iterations}')
 def encrypt_and_decrypt(text: str, key: str, iterations: int = 1, *, cipher: VigenaireСipher = Depends(get_cipher)):
     """
-    Метод для шифрония и дешифрония текста при помощи шифра Виженера
+    Метод для шифрония и расшифрования текста при помощи шифра Виженера
 
     Параметры:
-    - text: текст для шифрования и дешифрования
-    - key: ключ шифрования и дешифрования
-    - iterations: количество итераций шифрования и дешифрования
+    - text: текст для шифрования и расшифрования
+    - key: ключ шифрования и расшифрования
+    - iterations: количество итераций шифрования и расшифрования
     """
     encrypted_text = cipher.encrypting(text, key, iterations)
     decrypted_text = cipher.decrypting(encrypted_text, key, iterations)
