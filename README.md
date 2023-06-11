@@ -29,5 +29,5 @@ make up
 docker build -t vigenaire \
 docker run -d --name vigenaire_app -p 80:80 vigenaire
 ```
-4. Открываем в браузере http://localhost и радуемся жизни
+5. Открываем в браузере http://localhost и радуемся жизни
 
