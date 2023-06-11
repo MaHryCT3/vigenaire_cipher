@@ -21,13 +21,11 @@ cd vigenaire_cipher
 ```
 3. Если у вас есть Make
 ```bash
-make build \ 
-make up
+make build & make up
 ```
 4. Если у вас нет Make
 ```bash
-docker build -t vigenaire \
-docker run -d --name vigenaire_app -p 80:80 vigenaire
+docker build . -t vigenaire & docker run -d --name vigenaire_app -p 80:80 vigenaire
 ```
 5. Открываем в браузере http://localhost и радуемся жизни
 

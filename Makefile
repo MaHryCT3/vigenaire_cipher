@@ -1,5 +1,5 @@
 build:
-	docker build -t vigenaire
+	docker build . -t vigenaire
 
 up:
 	docker run -d --name vigenaire_app -p 80:80 vigenaire
