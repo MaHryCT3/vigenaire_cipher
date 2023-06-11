@@ -15,12 +15,16 @@
 ```bash
 git clone https://github.com/MaHryCT3/vigenaire_cipher.git
 ```
-2. Если у вас есть Make
+2. Перейти в папку с проектом
+```bash
+cd vigenaire_cipher
+```
+3. Если у вас есть Make
 ```bash
 make build \ 
 make up
 ```
-3. Если у вас нет Make
+4. Если у вас нет Make
 ```bash
 docker build -t vigenaire \
 docker run -d --name vigenaire_app -p 80:80 vigenaire
